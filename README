@@ -1,0 +1,24 @@
+## MobileNet Depolyment with Flask 
+
+
+This is an application that uploads a model with a webserver that uses flask.
+It is ready to make predictions from user input. 
+Employs data normalization to input. 
+Uses a pretained model that doesn't require fine tuning. 
+
+To install the dependencies, you can run: 
+```
+pip install -r requirements.txt
+```
+
+In order to run the application, you run the following comment:
+```
+FLASK_APP=flask_deployment.py flask run
+```
+
+In order to do your own prediction and interact with the server, 
+open a new termainal and run the following comment:
+```
+curl -X POST "Content-Type: multipart/form-data" http://localhost:5000/predict -F "file=@kitten.jpg"
+```
+
